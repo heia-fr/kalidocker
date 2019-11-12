@@ -1,8 +1,9 @@
 # kalidocker
 
-Based on the latest Kali docker. Used with the GNS3 net emulator (https://gns3.com).
-A minimum sets of tools are installed to be used in the different GNS3 Labs.
+Based on the latest Kali docker (https://www.kali.org/news/official-kali-linux-docker-images/). 
 
+Used with the GNS3 net emulator (https://gns3.com).
+A minimum sets of tools are installed to be used in the different GNS3 Labs.
 
 ## Tools installed
 * bettercap
