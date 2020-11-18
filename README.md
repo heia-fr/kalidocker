@@ -17,10 +17,12 @@ A minimum sets of tools are installed to be used in the different GNS3 Labs.
 * hping3 
 * hydra 
 * iputils-ping
+* iproute2
 * metasploit-framework
 * netcat
 * net-tools
 * nmap
+* scapy
 * snmp 
 * sqlmap 
 * telnet

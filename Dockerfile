@@ -23,12 +23,12 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
     MAINTAINER="Steev Klimaszewski <steev@kali.org>"
 ENV DEBIAN_FRONTEND noninteractive
 RUN set -x \
-    && apt-get -yqq update \
-    && apt-get -y install --no-install-recommends metasploit-framework nmap hydra \
-    && apt-get -y install --no-install-recommends sqlmap telnet openssh-client dnsutils \
-    && apt-get -y install --no-install-recommends yersinia ettercap-text-only cisco-global-exploiter \
-    && apt-get -y install --no-install-recommends cisco-auditing-tool snmp dsniff dnschef fping hping3 tshark python-scapy \
-    && apt-get -y install --no-install-recommends net-tools iputils-ping netcat vim \
-#    && rm -rf /var/lib/apt/lists/* \
-    && apt-get clean 
+    && apt -yqq update \
+    && apt -y install --no-install-recommends metasploit-framework nmap hydra \
+    && apt -y install --no-install-recommends sqlmap telnet openssh-client dnsutils \
+    && apt -y install --no-install-recommends yersinia ettercap-text-only cisco-global-exploiter \
+    && apt -y install --no-install-recommends cisco-auditing-tool snmp dsniff dnschef fping hping3 tshark python3-scapy \
+    && apt -y install --no-install-recommends net-tools iputils-ping netcat iproute2  \
+    && rm -rf /var/lib/apt/lists/* \
+    && apt clean 
 CMD ["bash"]
