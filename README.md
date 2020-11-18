@@ -16,7 +16,10 @@ A minimum sets of tools are installed to be used in the different GNS3 Labs.
 * fping
 * hping3 
 * hydra 
+* iputils-ping
 * metasploit-framework
+* netcat
+* net-tools
 * nmap
 * snmp 
 * sqlmap 
@@ -26,6 +29,6 @@ A minimum sets of tools are installed to be used in the different GNS3 Labs.
 * python-scapy
 * yersinia 
 
-(c) 2019, F.Buntschu, HEIA-FR
+(c) 2019-2020, F.Buntschu, HEIA-FR
 
 
