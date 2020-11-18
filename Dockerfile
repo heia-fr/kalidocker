@@ -29,6 +29,6 @@ RUN set -x \
     && apt-get -y install --no-install-recommends yersinia ettercap-text-only cisco-global-exploiter \
     && apt-get -y install --no-install-recommends cisco-auditing-tool snmp dsniff dnschef fping hping3 tshark python-scapy \
     && apt-get -y install --no-install-recommends net-tools iputils-ping netcat vim \
-    && rm -rf /var/lib/apt/lists/* \
+#    && rm -rf /var/lib/apt/lists/* \
     && apt-get clean 
 CMD ["bash"]
