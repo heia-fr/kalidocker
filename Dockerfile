@@ -1,4 +1,4 @@
-FROM kalilinux/kali-linux-docker
+FROM kalilinux/kali-rolling
 # Metadata params
 ARG BUILD_DATE
 ARG VERSION
@@ -15,20 +15,20 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
     org.label-schema.url='https://www.kali.org/' \
     org.label-schema.vendor='Offensive Security' \
     org.label-schema.schema-version='1.0' \
-    org.label-schema.docker.cmd='docker run --rm kalilinux/kali-linux-docker' \
-    org.label-schema.docker.cmd.devel='docker run --rm -ti kalilinux/kali-linux-docker' \
+    org.label-schema.docker.cmd='docker run --rm kalilinux/kali-rolling' \
+    org.label-schema.docker.cmd.devel='docker run --rm -ti kalilinux/kali-rolling' \
     org.label-schema.docker.debug='docker logs $CONTAINER' \
     io.github.offensive-security.docker.dockerfile="Dockerfile" \
     io.github.offensive-security.license="GPLv3" \
     MAINTAINER="Steev Klimaszewski <steev@kali.org>"
-RUN echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list && \
-    echo "deb-src http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list
 ENV DEBIAN_FRONTEND noninteractive
 RUN set -x \
     && apt-get -yqq update \
-    && apt-get -yqq dist-upgrade \
-    && apt-get -y autoremove \
-    && apt-get -y install --no-install-recommends metasploit-framework nmap hydra sqlmap telnet openssh-client dnsutils yersinia ettercap-text-only cisco-global-exploiter cisco-auditing-tool snmp dsniff dnschef fping hping3 tshark python-scapy \
+    && apt-get -y install --no-install-recommends metasploit-framework nmap hydra \
+    && apt-get -y install --no-install-recommends sqlmap telnet openssh-client dnsutils \
+    && apt-get -y install --no-install-recommends yersinia ettercap-text-only cisco-global-exploiter \
+    && apt-get -y install --no-install-recommends cisco-auditing-tool snmp dsniff dnschef fping hping3 tshark python-scapy \
+    && apt-get -y install --no-install-recommends net-tools iputils-ping \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean 
 CMD ["bash"]
