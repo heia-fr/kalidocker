@@ -28,7 +28,8 @@ RUN set -x \
     && apt -y install --no-install-recommends sqlmap telnet openssh-client dnsutils \
     && apt -y install --no-install-recommends yersinia ettercap-text-only cisco-global-exploiter \
     && apt -y install --no-install-recommends cisco-auditing-tool snmp dsniff dnschef fping hping3 tshark python3-scapy \
-    && apt -y install --no-install-recommends net-tools iputils-ping netcat iproute2  \
+    && apt -y install --no-install-recommends net-tools iputils-ping netcat iproute2 ipv6-toolkit thc-ipv6 \
     && rm -rf /var/lib/apt/lists/* \
-    && apt clean 
+    && apt clean \ 
+    && wget http://nmap.org/svn/scripts/targets-ipv6-multicast-slaac.nse
 CMD ["bash"]
