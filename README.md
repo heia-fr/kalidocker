@@ -18,6 +18,7 @@ A minimum sets of tools are installed to be used in the different GNS3 Labs.
 * hydra 
 * iputils-ping
 * iproute2
+* ipv6-toolkit
 * metasploit-framework
 * netcat
 * net-tools
@@ -26,6 +27,7 @@ A minimum sets of tools are installed to be used in the different GNS3 Labs.
 * snmp 
 * sqlmap 
 * telnet
+* thc-ipv6
 * tshark 
 * openssh-client
 * python-scapy
